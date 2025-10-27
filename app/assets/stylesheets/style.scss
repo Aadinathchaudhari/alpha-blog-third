@@ -19,3 +19,33 @@
 #home-container{
     margin-top: 25px;
 }
+
+.jumbotron {
+  background-color: #e9ecef; /* light gray */
+  padding: 2rem 1rem;
+  border-radius: 0.3rem;
+
+  background-image: asset-url('jumbo-copy.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 450px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+  background-color: lightgrey;
+}
+
+/* Other Classes for Page Styling */
+
+body {
+  background: #007bff;
+  background: linear-gradient(to right, #0062E6, #33AEFF);
+}
