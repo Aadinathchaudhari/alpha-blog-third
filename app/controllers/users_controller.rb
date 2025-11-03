@@ -3,11 +3,13 @@ class UsersController < ApplicationController
 
     def show 
          @user=User.find(params[:id])
-         @articles= @user.articles
+        # @articles= @user.articles
+         @articles= @user.articles.paginate(page: params[:page], per_page: 5)
     end   
 
     def index
-         @user= User.all
+         #@user= User.all
+         @user=User.paginate(page: params[:page], per_page: 5)
     end
 
     def new 
@@ -16,6 +18,7 @@ class UsersController < ApplicationController
     
     def edit
         @user=User.find(params[:id])
+        
     end
 
     def update 
